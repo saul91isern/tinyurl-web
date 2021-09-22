@@ -13,4 +13,10 @@ const JSON_OPTS = {
 const apiGet = (url, opts) =>
   axios.get(url, opts).then(({ data, headers }) => ({ data, headers }));
 
-export { apiGet, JSON_OPTS };
+const apiDelete = (url, opts) =>
+  axios.delete(url, opts).then(({ data, headers }) => ({ data, headers }));
+
+const apiPost = (url, data, opts) =>
+  axios.post(url, data, opts).then(({ data, headers }) => ({ data, headers }));
+
+export { apiDelete, apiGet, apiPost, JSON_OPTS };

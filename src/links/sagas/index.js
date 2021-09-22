@@ -1,5 +1,13 @@
-import { fetchLinksRequestSaga } from "./links";
+import {
+  createLinkRequestSaga,
+  deleteLinkRequestSaga,
+  fetchLinksRequestSaga,
+} from "./links";
 
-export { fetchLinksRequestSaga };
+export { createLinkRequestSaga, deleteLinkRequestSaga, fetchLinksRequestSaga };
 
-export default [fetchLinksRequestSaga()];
+export default [
+  createLinkRequestSaga(),
+  deleteLinkRequestSaga(),
+  fetchLinksRequestSaga(),
+];
