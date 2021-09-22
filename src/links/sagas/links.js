@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from "redux-saga/effects";
-import { apiDelete, apiJson, apiPost, JSON_OPTS } from "api";
 import pathToRegexp from "path-to-regexp";
+import { apiDelete, apiGet, apiPost, JSON_OPTS } from "../../api";
 import { createLink, deleteLink, fetchLinks } from "../routines";
 import { API_LINKS } from "../api";
 
@@ -8,7 +8,7 @@ export function* fetchLinksSaga() {
   try {
     const url = API_LINKS;
     yield put(fetchLinks.request());
-    const { data } = yield call(apiJson, url, JSON_OPTS);
+    const { data } = yield call(apiGet, url, JSON_OPTS);
     yield put(fetchLinks.success(data));
   } catch (error) {
     if (error.response) {

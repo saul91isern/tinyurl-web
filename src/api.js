@@ -1,6 +1,5 @@
 import axios from "axios";
 
-// eslint-disable-next-line fp/no-mutation
 axios.defaults.baseURL = process.env.REACT_APP_API_HOST;
 
 const JSON_OPTS = {

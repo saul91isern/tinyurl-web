@@ -1,10 +1,9 @@
 {
   "extends": [
-    "plugin:react/recommended",
-    "plugin:prettier/recommended"
+    "plugin:react/recommended"
+    // "plugin:prettier/recommended"
   ],
   "plugins": [
-    "fp",
     "import",
     "react",
     "react-hooks"
@@ -44,25 +43,6 @@
     "import/export": "warn",
     "import/first": "warn",
     "import/order": "warn",
-    "fp/no-let": "error",
-    "fp/no-mutation": [
-      "error",
-      {
-        "allowThis": true,
-        "commonjs": true,
-        "exceptions": [
-          {
-            "property": "current"
-          },
-          {
-            "property": "defaultProps"
-          },
-          {
-            "property": "propTypes"
-          }
-        ]
-      }
-    ],
     "no-var": "warn",
     "no-undef": "error",
     "no-param-reassign": "error",
@@ -76,19 +56,15 @@
       "version": "16.8"
     }
   },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
   "env": {
     "browser": true,
     "es6": true,
     "node": true,
     "jest": true
-  },
-  "parser": "babel-eslint",
-  "parserOptions": {
-    "ecmaVersion": 6,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true,
-      "experimentalObjectRestSpread": true
-    }
   }
 }
