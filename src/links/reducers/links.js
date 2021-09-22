@@ -1,8 +1,10 @@
+import { fetchLinks } from "../routines";
+
 const linksLoading = (state = false, { type }) => {
   switch (type) {
-    case "trigger":
+    case fetchLinks.TRIGGER:
       return true;
-    case "fullfill":
+    case fetchLinks.FULFILL:
       return false;
     default:
       return state;
@@ -11,9 +13,9 @@ const linksLoading = (state = false, { type }) => {
 
 const links = (state = [], { type, payload }) => {
   switch (type) {
-    case "trigger":
+    case fetchLinks.TRIGGER:
       return [];
-    case "success":
+    case fetchLinks.SUCCESS:
       return payload.data;
     default:
       return state;
