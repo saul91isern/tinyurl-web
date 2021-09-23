@@ -34,6 +34,7 @@ export const LinkForm = ({ createLink }) => {
         render={({ field: { onChange, value } }) => (
           <Form.Input
             id="url"
+            fluid
             autoComplete="off"
             required
             label={"Url"}
