@@ -6,9 +6,11 @@ import { Message, Table } from "semantic-ui-react";
 
 export const Links = ({ links }) => {
   return _.isEmpty(links) ? (
-    <Message icon="warning circle" header='No results found'
-    content='Maybe you want shorten a new url first.'
-  />
+    <Message
+      icon="warning circle"
+      header="No results found"
+      content="Maybe you want shorten a new url first."
+    />
   ) : (
     <Table basic="very" celled collapsing>
       <Table.Header>
