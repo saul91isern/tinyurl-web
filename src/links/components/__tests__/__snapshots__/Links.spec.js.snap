@@ -1,0 +1,263 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Links /> renders Loader if loading 1`] = `
+<div>
+  <div
+    class="ui icon input"
+  >
+    <input
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+    <i
+      aria-hidden="true"
+      class="search circular icon"
+    />
+  </div>
+  <div
+    class="dimmed dimmable"
+  >
+    <div
+      class="ui active transition visible inverted dimmer"
+      style="display: flex;"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="ui loader"
+        />
+      </div>
+    </div>
+    <table
+      class="ui celled collapsing table"
+    >
+      <thead
+        class=""
+      >
+        <tr
+          class=""
+        >
+          <th
+            class=""
+          >
+            Complete Url
+          </th>
+          <th
+            class=""
+          >
+            Shortened Url
+          </th>
+          <th
+            class=""
+          >
+            Copy
+          </th>
+          <th
+            class=""
+          >
+            Delete
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class=""
+      />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`<Links /> renders links when not empty 1`] = `
+<div>
+  <div
+    class="ui icon input"
+  >
+    <input
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+    <i
+      aria-hidden="true"
+      class="search circular icon"
+    />
+  </div>
+  <div
+    class="dimmable"
+  >
+    <div
+      class="ui inverted dimmer"
+    >
+      <div
+        class="content"
+      >
+        <div
+          class="ui loader"
+        />
+      </div>
+    </div>
+    <table
+      class="ui celled collapsing table"
+    >
+      <thead
+        class=""
+      >
+        <tr
+          class=""
+        >
+          <th
+            class=""
+          >
+            Complete Url
+          </th>
+          <th
+            class=""
+          >
+            Shortened Url
+          </th>
+          <th
+            class=""
+          >
+            Copy
+          </th>
+          <th
+            class=""
+          >
+            Delete
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        class=""
+      >
+        <tr
+          class=""
+        >
+          <td
+            class=""
+          >
+            <a
+              href="http://foo/bar"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              http://foo/bar
+            </a>
+          </td>
+          <td
+            class=""
+          >
+            <a
+              href="http://localhost:4000/FOO"
+              id="link_0"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              http://localhost:4000/FOO
+            </a>
+          </td>
+          <td
+            class=""
+          >
+            <i
+              aria-hidden="true"
+              class="copy link icon"
+            />
+          </td>
+          <td
+            class=""
+          >
+            <i
+              aria-hidden="true"
+              class="trash link icon"
+            />
+          </td>
+        </tr>
+        <tr
+          class=""
+        >
+          <td
+            class=""
+          >
+            <a
+              href="http://baz/xyz"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              http://baz/xyz
+            </a>
+          </td>
+          <td
+            class=""
+          >
+            <a
+              href="http://localhost:4000/BAR"
+              id="link_1"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              http://localhost:4000/BAR
+            </a>
+          </td>
+          <td
+            class=""
+          >
+            <i
+              aria-hidden="true"
+              class="copy link icon"
+            />
+          </td>
+          <td
+            class=""
+          >
+            <i
+              aria-hidden="true"
+              class="trash link icon"
+            />
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
+
+exports[`<Links /> renders message on empty links 1`] = `
+<div>
+  <div
+    class="ui icon input"
+  >
+    <input
+      placeholder="Search..."
+      type="text"
+      value=""
+    />
+    <i
+      aria-hidden="true"
+      class="search circular icon"
+    />
+  </div>
+  <div
+    class="ui icon message"
+  >
+    <i
+      aria-hidden="true"
+      class="question icon"
+    />
+    <div
+      class="content"
+    >
+      <div
+        class="header"
+      >
+        No results found
+      </div>
+      <p>
+        Maybe you want shorten a new url first.
+      </p>
+    </div>
+  </div>
+</div>
+`;
