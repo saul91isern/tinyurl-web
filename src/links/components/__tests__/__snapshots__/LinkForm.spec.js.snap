@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LinkForm /> matches last snapshot 1`] = `
+<div>
+  <form
+    class="ui form"
+  >
+    <div
+      class="required field"
+    >
+      <label
+        for="url"
+      >
+        Url
+      </label>
+      <div
+        class="ui fluid input"
+      >
+        <input
+          autocomplete="off"
+          id="url"
+          placeholder="Enter a valid url"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <button
+      class="ui disabled button"
+      disabled=""
+      tabindex="-1"
+      type="submit"
+    >
+      Submit
+    </button>
+  </form>
+</div>
+`;
