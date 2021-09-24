@@ -64,8 +64,8 @@ Home.propTypes = {
   loading: PropTypes.bool,
 };
 
-const mapStateToProps = ({ createLinkLoading, linksLoading }) => ({
-  loading: createLinkLoading || linksLoading,
+const mapStateToProps = ({ createLinkLoading, deleteLinkLoading }) => ({
+  loading: createLinkLoading || deleteLinkLoading,
 });
 
 export default connect(mapStateToProps)(Home);

@@ -58,6 +58,19 @@ exports[`<Home /> renders Home when not loading 1`] = `
             class="middle aligned column"
           >
             <div
+              class="ui icon input"
+            >
+              <input
+                placeholder="Search..."
+                type="text"
+                value=""
+              />
+              <i
+                aria-hidden="true"
+                class="search circular icon"
+              />
+            </div>
+            <div
               class="ui icon message"
             >
               <i

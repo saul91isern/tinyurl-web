@@ -1,12 +1,13 @@
+import _ from "lodash/fp";
 import { call, put, takeLatest } from "redux-saga/effects";
 import pathToRegexp from "path-to-regexp";
 import { apiDelete, apiGet, apiPost, JSON_OPTS } from "../../api";
 import { createLink, deleteLink, fetchLinks } from "../routines";
 import { API_LINK, API_LINKS } from "../api";
 
-export function* fetchLinksSaga() {
+export function* fetchLinksSaga({ payload }) {
   try {
-    const url = API_LINKS;
+    const url = _.isEmpty(payload) ? API_LINKS : `${API_LINKS}?q=${payload}`;
     yield put(fetchLinks.request());
     const { data } = yield call(apiGet, url, JSON_OPTS);
     yield put(fetchLinks.success(data));

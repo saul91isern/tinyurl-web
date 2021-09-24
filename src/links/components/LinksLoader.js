@@ -3,20 +3,29 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { clearLinks, fetchLinks } from "../routines";
 
-export const LinksLoader = ({ clearLinks, fetchLinks }) => {
+export const LinksLoader = ({ linksQuery, clearLinks, fetchLinks }) => {
   useEffect(() => {
     fetchLinks();
     return () => {
       clearLinks();
     };
   }, [clearLinks, fetchLinks]);
+  useEffect(() => {
+    fetchLinks(linksQuery);
+  }, [linksQuery, fetchLinks]);
   return null;
 };
 
 LinksLoader.propTypes = {
-  clearTemplates: PropTypes.func,
-  fetchTemplates: PropTypes.func,
-  scope: PropTypes.string,
+  clearLinks: PropTypes.func,
+  fetchLinks: PropTypes.func,
+  linksQuery: PropTypes.string,
 };
 
-export default connect(null, { clearLinks, fetchLinks })(LinksLoader);
+const mapStateToProps = ({ linksQuery }) => ({
+  linksQuery,
+});
+
+export default connect(mapStateToProps, { clearLinks, fetchLinks })(
+  LinksLoader
+);
