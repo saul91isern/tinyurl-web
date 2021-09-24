@@ -1,5 +1,5 @@
 import _ from "lodash/fp";
-import { createLink, dismissAlert, fetchLinks } from "../routines";
+import { createLink, deleteLink, dismissAlert, fetchLinks } from "../routines";
 
 const genericErrors = {
   303: {
@@ -35,15 +35,22 @@ const message = (state = {}, { type, payload }) => {
     }
     case createLink.SUCCESS:
       return { header: "Succes", text: "New url created", success: true };
-    case createLink.FAILURE: {
-      const status = payload?.status;
-      return _.flow(_.prop(status), _.defaultTo(unknown))(genericErrors);
-    }
+    case createLink.FAILURE:
+      return defaultFailureFormat(payload);
+    case deleteLink.SUCCESS:
+      return { header: "Succes", text: "Url deleted", success: true };
+    case deleteLink.FAILURE:
+      return defaultFailureFormat(payload);
     case dismissAlert.TRIGGER:
       return {};
     default:
       return state;
   }
+};
+
+const defaultFailureFormat = (payload) => {
+  const status = payload?.status;
+  return _.flow(_.prop(status), _.defaultTo(unknown))(genericErrors);
 };
 
 export { message };

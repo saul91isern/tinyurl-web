@@ -2,7 +2,7 @@ import { call, put, takeLatest } from "redux-saga/effects";
 import pathToRegexp from "path-to-regexp";
 import { apiDelete, apiGet, apiPost, JSON_OPTS } from "../../api";
 import { createLink, deleteLink, fetchLinks } from "../routines";
-import { API_LINKS } from "../api";
+import { API_LINK, API_LINKS } from "../api";
 
 export function* fetchLinksSaga() {
   try {
@@ -45,7 +45,7 @@ export function* createLinkRequestSaga() {
 
 export function* deleteLinkSaga({ payload }) {
   try {
-    const url = pathToRegexp.compile(API_LINKS)({ id: payload });
+    const url = pathToRegexp.compile(API_LINK)({ id: payload });
     yield put(deleteLink.request());
     yield call(apiDelete, url, JSON_OPTS);
     yield put(deleteLink.success());

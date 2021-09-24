@@ -15,7 +15,11 @@ import Alert from "./Alert";
 
 const Home = ({ loading }) => (
   <>
-    <Menu attached="top"></Menu>
+    <Menu attached="top">
+      <Menu.Item header>
+        <Icon name="world" size={"big"} /> My first url shortener
+      </Menu.Item>
+    </Menu>
     <Container text style={{ marginTop: "40px" }}>
       <Alert />
     </Container>
