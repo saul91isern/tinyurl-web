@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home /> renders Home when not loading 1`] = `
+<div>
+  <div
+    class="ui top attached menu"
+  >
+    <div
+      class="header item"
+    >
+      <i
+        aria-hidden="true"
+        class="world big icon"
+      />
+       My first url shortener
+    </div>
+  </div>
+  <div
+    class="ui text container"
+    style="margin-top: 40px;"
+  />
+  <div
+    class="ui fluid container"
+    style="margin-top: 40px;"
+  >
+    <div
+      class="ui grid"
+    >
+      <div
+        class="row"
+      >
+        <div
+          class="center aligned column"
+        >
+          <h2
+            class="ui header"
+          >
+            URL Shortener
+            <div
+              class="sub header"
+            >
+              Manage and simplify your urls.
+            </div>
+          </h2>
+        </div>
+      </div>
+    </div>
+    <div
+      class="ui placeholder segment"
+    >
+      <div
+        class="ui divided two column grid"
+      >
+        <div
+          class="row"
+        >
+          <div
+            class="middle aligned column"
+          >
+            <div
+              class="ui icon message"
+            >
+              <i
+                aria-hidden="true"
+                class="question icon"
+              />
+              <div
+                class="content"
+              >
+                <div
+                  class="header"
+                >
+                  No results found
+                </div>
+                <p>
+                  Maybe you want shorten a new url first.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="middle aligned column"
+          >
+            <div
+              class="ui center aligned container"
+            >
+              <div
+                class="ui icon header"
+              >
+                <i
+                  aria-hidden="true"
+                  class="world icon"
+                />
+                Add New Url
+              </div>
+            </div>
+            <div
+              class="ui container"
+            >
+              <form
+                class="ui form"
+              >
+                <div
+                  class="required field"
+                >
+                  <label
+                    for="url"
+                  >
+                    Url
+                  </label>
+                  <div
+                    class="ui fluid input"
+                  >
+                    <input
+                      autocomplete="off"
+                      id="url"
+                      placeholder="Enter a valid url"
+                      required=""
+                      type="text"
+                      value=""
+                    />
+                  </div>
+                </div>
+                <button
+                  class="ui disabled button"
+                  disabled=""
+                  tabindex="-1"
+                  type="submit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

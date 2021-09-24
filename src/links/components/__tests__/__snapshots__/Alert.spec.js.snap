@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Alert /> renders error message 1`] = `
+<div>
+  <div
+    class="ui error icon visible message"
+  >
+    <i
+      aria-hidden="true"
+      class="close icon"
+    />
+    <i
+      aria-hidden="true"
+      class="warning sign icon"
+    />
+    <div
+      class="content"
+    >
+      <div
+        class="header"
+      >
+        xyz
+      </div>
+      <p>
+        baz
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Alert /> renders success message 1`] = `
+<div>
+  <div
+    class="ui visible message"
+  >
+    <i
+      aria-hidden="true"
+      class="close icon"
+    />
+    <div
+      class="content"
+    >
+      <div
+        class="header"
+      >
+        bar
+      </div>
+      <p>
+        foo
+      </p>
+    </div>
+  </div>
+</div>
+`;

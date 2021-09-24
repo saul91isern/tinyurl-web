@@ -13,7 +13,7 @@ import Links from "./Links";
 import LinkForm from "./LinkForm";
 import Alert from "./Alert";
 
-const Home = ({ loading }) => (
+export const Home = ({ loading }) => (
   <>
     <Menu attached="top">
       <Menu.Item header>

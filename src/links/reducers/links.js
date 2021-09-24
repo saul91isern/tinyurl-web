@@ -1,4 +1,4 @@
-import { createLink, fetchLinks } from "../routines";
+import { createLink, deleteLink, fetchLinks } from "../routines";
 
 const linksLoading = (state = false, { type }) => {
   switch (type) {
@@ -22,6 +22,17 @@ const createLinkLoading = (state = false, { type }) => {
   }
 };
 
+const deleteLinkLoading = (state = false, { type }) => {
+  switch (type) {
+    case deleteLink.TRIGGER:
+      return true;
+    case deleteLink.FULFILL:
+      return false;
+    default:
+      return state;
+  }
+};
+
 const links = (state = [], { type, payload }) => {
   switch (type) {
     case fetchLinks.TRIGGER:
@@ -33,4 +44,4 @@ const links = (state = [], { type, payload }) => {
   }
 };
 
-export { createLinkLoading, links, linksLoading };
+export { createLinkLoading, deleteLinkLoading, links, linksLoading };
