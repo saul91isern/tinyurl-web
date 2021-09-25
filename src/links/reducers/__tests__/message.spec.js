@@ -81,7 +81,7 @@ describe("reducers: message", () => {
     });
   });
 
-  it("should return route after dismissAlert.TRIGGER action", () => {
+  it("should empty message after dismissAlert.TRIGGER action", () => {
     expect(message(undefined, { type: dismissAlert.TRIGGER })).toEqual({});
   });
 

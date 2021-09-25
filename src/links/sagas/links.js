@@ -34,7 +34,12 @@ export function* createLinkSaga({ payload }) {
     const { data } = yield call(apiPost, url, { link: payload }, JSON_OPTS);
     yield put(createLink.success(data));
   } catch (error) {
-    yield put(createLink.failure(error.response));
+    if (error.response) {
+      const { status, data } = error.response;
+      yield put(createLink.failure({ status, data }));
+    } else {
+      yield put(createLink.failure(error.message));
+    }
   } finally {
     yield put(createLink.fulfill());
   }
@@ -51,7 +56,12 @@ export function* deleteLinkSaga({ payload }) {
     yield call(apiDelete, url, JSON_OPTS);
     yield put(deleteLink.success());
   } catch (error) {
-    yield put(deleteLink.failure(error.response));
+    if (error.response) {
+      const { status, data } = error.response;
+      yield put(deleteLink.failure({ status, data }));
+    } else {
+      yield put(deleteLink.failure(error.message));
+    }
   } finally {
     yield put(deleteLink.fulfill());
   }
