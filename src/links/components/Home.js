@@ -17,7 +17,7 @@ export const Home = ({ loading }) => (
   <>
     <Menu attached="top">
       <Menu.Item header>
-        <Icon name="world" size={"big"} /> My first url shortener
+        <Icon name="share alternate" size={"big"} /> My first url shortener
       </Menu.Item>
     </Menu>
     <Container text style={{ marginTop: "40px" }}>

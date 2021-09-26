@@ -10,7 +10,7 @@ exports[`<Home /> renders Home when not loading 1`] = `
     >
       <i
         aria-hidden="true"
-        class="world big icon"
+        class="share alternate big icon"
       />
        My first url shortener
     </div>
