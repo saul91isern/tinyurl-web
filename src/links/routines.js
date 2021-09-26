@@ -7,3 +7,4 @@ export const deleteLink = createRoutine("DELETE_LINK");
 export const fetchLinks = createRoutine("FETCH_LINKS");
 export const dismissAlert = createRoutine("DISMISS_ALERT");
 export const setQuery = createRoutine("SET_QUERY");
+export const selectPage = createRoutine("SELECT_PAGE");

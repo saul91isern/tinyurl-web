@@ -62,8 +62,8 @@ describe("reducers: links", () => {
     expect(links(undefined, {})).toEqual([]);
   });
 
-  it("should be empty list after receiving the TRIGGER action", () => {
-    expect(links(undefined, { type: fetchLinks.TRIGGER })).toEqual([]);
+  it("should be state after TRIGGER action", () => {
+    expect(links(fooState, { type: fetchLinks.TRIGGER })).toEqual(fooState);
   });
 
   it("should be informed on SUCCESS", () => {

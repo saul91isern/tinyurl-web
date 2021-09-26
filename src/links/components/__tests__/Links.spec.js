@@ -5,10 +5,14 @@ import userEvent from "@testing-library/user-event";
 import { render } from "../../../test/render";
 import { Links } from "../Links";
 
+jest.mock("../Pagination", () => () => "Pagination");
+
 describe("<Links />", () => {
   const loading = false;
   const deleteLink = jest.fn();
   const setQuery = jest.fn();
+  const totalPages = 1;
+  const activePage = 1;
   const linksQuery = "";
   const links = [
     { url: "http://foo/bar", hash: "FOO" },
@@ -24,7 +28,7 @@ describe("<Links />", () => {
         setQuery={setQuery}
         linksQuery={linksQuery}
       />,
-      {}
+      { state: { totalPages, activePage } }
     );
     expect(queryByText(/http:\/\/foo\/bar/)).toBeTruthy();
     expect(queryByText(/http:\/\/baz\/xyz/)).toBeTruthy();

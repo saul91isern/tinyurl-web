@@ -31,7 +31,7 @@ exports[`<Links /> renders Loader if loading 1`] = `
       </div>
     </div>
     <table
-      class="ui celled collapsing table"
+      class="ui collapsing striped table"
     >
       <thead
         class=""
@@ -65,6 +65,7 @@ exports[`<Links /> renders Loader if loading 1`] = `
         class=""
       />
     </table>
+    Pagination
   </div>
 </div>
 `;
@@ -99,7 +100,7 @@ exports[`<Links /> renders links when not empty 1`] = `
       </div>
     </div>
     <table
-      class="ui celled collapsing table"
+      class="ui collapsing striped table"
     >
       <thead
         class=""
@@ -220,6 +221,7 @@ exports[`<Links /> renders links when not empty 1`] = `
         </tr>
       </tbody>
     </table>
+    Pagination
   </div>
 </div>
 `;

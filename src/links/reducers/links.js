@@ -36,7 +36,7 @@ const deleteLinkLoading = (state = false, { type }) => {
 const links = (state = [], { type, payload }) => {
   switch (type) {
     case fetchLinks.TRIGGER:
-      return [];
+      return state;
     case fetchLinks.SUCCESS:
       return payload.data;
     default:
