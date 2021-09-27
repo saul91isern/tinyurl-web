@@ -1,4 +1,37 @@
-# Getting Started with Create React App
+# tinyurl-web
+
+Front end for our tiny url application.
+
+## Development:
+
+We need yarn to install and launch the app in development mode.
+
+Start the react application
+
+   * Install dependencies `yarn`
+   * Test application `yarn test`
+   * Run `yarn start`
+
+Backend api host is declared in the .env file. If you prefer to change the domain on which the API is deployed beware of changing the host in this file.
+By default, the web application is launched in port 3000 in development mode. [`localhost:3000`](http://localhost:3000)
+
+## Production:
+
+We need to install docker and docker compose to run the app in production mode.
+There is a `ci/` folder simulating the existing stages in a ci pipeline:
+
+To run your Application:
+
+   * Export needed variables: run `source ci/env.sh` in project root. Feel free to change any of the variables within the file 
+  to adapt the installation to your needs.
+   * Build the application `docker-compose run --rm build` in project root. It builds the static files under a `build` folder in the root directory.
+   * Test with `docker-compose run --rm test` in project root.
+   * Service `docker-compose run --rm --service-ports service` in project root. It runs the static files under `serve` in port 5000. [`localhost:5000`](http://localhost:5000)
+
+
+## Learn more
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
